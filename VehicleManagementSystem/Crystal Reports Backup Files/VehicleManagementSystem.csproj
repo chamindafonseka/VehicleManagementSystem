@@ -1,0 +1,436 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="14.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{89D237B1-BA7B-4C6E-A19D-B168DD0E717C}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>VehicleManagementSystem</RootNamespace>
+    <AssemblyName>VehicleManagementSystem</AssemblyName>
+    <TargetFrameworkVersion>v4.6</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <PublishUrl>publish\</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Disk</InstallFrom>
+    <UpdateEnabled>false</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <ApplicationRevision>0</ApplicationRevision>
+    <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
+    <IsWebBootstrapper>false</IsWebBootstrapper>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup>
+    <StartupObject>
+    </StartupObject>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="CrystalDecisions.CrystalReports.Engine, Version=13.0.3500.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL" />
+    <Reference Include="CrystalDecisions.ReportSource, Version=13.0.3500.0, Culture=neutral, PublicKeyToken=692fbea5521e1304" />
+    <Reference Include="CrystalDecisions.Shared, Version=13.0.3500.0, Culture=neutral, PublicKeyToken=692fbea5521e1304" />
+    <Reference Include="CrystalDecisions.Windows.Forms, Version=13.0.3500.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL" />
+    <Reference Include="FlashControlV71, Version=1.0.3187.32366, Culture=neutral, PublicKeyToken=692fbea5521e1304" />
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="crFrmFuelHistory.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="crFrmFuelHistory.Designer.cs">
+      <DependentUpon>crFrmFuelHistory.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmDocumentStore.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmDocumentStore.Designer.cs">
+      <DependentUpon>frmDocumentStore.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FillingStation.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FillingStation.Designer.cs">
+      <DependentUpon>FillingStation.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmEmployeeDetails.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmEmployeeDetails.Designer.cs">
+      <DependentUpon>frmEmployeeDetails.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmAttendance.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmAttendance.Designer.cs">
+      <DependentUpon>frmAttendance.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmBranch.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmBranch.Designer.cs">
+      <DependentUpon>frmBranch.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmChangePassword.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmChangePassword.Designer.cs">
+      <DependentUpon>frmChangePassword.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmDriver.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmDriver.Designer.cs">
+      <DependentUpon>frmDriver.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmLicenseProvider.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmLicenseProvider.Designer.cs">
+      <DependentUpon>frmLicenseProvider.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmLogin.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmLogin.Designer.cs">
+      <DependentUpon>frmLogin.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmItem.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmNewUser.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmNewUser.Designer.cs">
+      <DependentUpon>frmNewUser.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmRunningChart.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmRunningChart.Designer.cs">
+      <DependentUpon>frmRunningChart.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmServicecs.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmServicecs.Designer.cs">
+      <DependentUpon>frmServicecs.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmSMS.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmSMS.Designer.cs">
+      <DependentUpon>frmSMS.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmSupplier.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmSupplier.Designer.cs">
+      <DependentUpon>frmSupplier.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmTeamdetail.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmTeamdetail.Designer.cs">
+      <DependentUpon>frmTeamdetail.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmTeamEmployee.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmTeamEmployee.Designer.cs">
+      <DependentUpon>frmTeamEmployee.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmUserRights.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmUserRights.Designer.cs">
+      <DependentUpon>frmUserRights.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmFuelFilling.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmFuelFilling.Designer.cs">
+      <DependentUpon>frmFuelFilling.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmVehicleRepairing.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmVehicleRepairing.Designer.cs">
+      <DependentUpon>frmVehicleRepairing.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmVehicleService.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmVehicleService.Designer.cs">
+      <DependentUpon>frmVehicleService.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmViewDocument.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmViewDocument.Designer.cs">
+      <DependentUpon>frmViewDocument.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Item.Designer.cs">
+      <DependentUpon>frmItem.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmOtherExpense.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmOtherExpense.Designer.cs">
+      <DependentUpon>frmOtherExpense.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Form1.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form1.Designer.cs">
+      <DependentUpon>Form1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmGarage.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmGarage.Designer.cs">
+      <DependentUpon>frmGarage.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmGovt. License Provider.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmGovt. License Provider.Designer.cs">
+      <DependentUpon>frmGovt. License Provider.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmInsuranceCompany.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmInsuranceCompany.Designer.cs">
+      <DependentUpon>frmInsuranceCompany.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PublicVariables.cs" />
+    <Compile Include="frmRoute.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmRoute.Designer.cs">
+      <DependentUpon>frmRoute.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="frmEmployee.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmEmployee.Designer.cs">
+      <DependentUpon>frmEmployee.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmServiceCenter.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmServiceCenter.Designer.cs">
+      <DependentUpon>frmServiceCenter.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmTeam.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmTeam.Designer.cs">
+      <DependentUpon>frmTeam.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmVehicle.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmVehicle.Designer.cs">
+      <DependentUpon>frmVehicle.cs</DependentUpon>
+    </Compile>
+    <Compile Include="VMSDataSet.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>VMSDataSet.xsd</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="crFrmFuelHistory.resx">
+      <DependentUpon>crFrmFuelHistory.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmDocumentStore.resx">
+      <DependentUpon>frmDocumentStore.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FillingStation.resx">
+      <DependentUpon>FillingStation.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmEmployeeDetails.resx">
+      <DependentUpon>frmEmployeeDetails.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmAttendance.resx">
+      <DependentUpon>frmAttendance.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmBranch.resx">
+      <DependentUpon>frmBranch.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form1.resx">
+      <DependentUpon>Form1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmChangePassword.resx">
+      <DependentUpon>frmChangePassword.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmDriver.resx">
+      <DependentUpon>frmDriver.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmItem.resx">
+      <DependentUpon>frmItem.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmLicenseProvider.resx">
+      <DependentUpon>frmLicenseProvider.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmLogin.resx">
+      <DependentUpon>frmLogin.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmGarage.resx">
+      <DependentUpon>frmGarage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmGovt. License Provider.resx">
+      <DependentUpon>frmGovt. License Provider.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmInsuranceCompany.resx">
+      <DependentUpon>frmInsuranceCompany.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmNewUser.resx">
+      <DependentUpon>frmNewUser.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmRoute.resx">
+      <DependentUpon>frmRoute.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmRunningChart.resx">
+      <DependentUpon>frmRunningChart.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmServicecs.resx">
+      <DependentUpon>frmServicecs.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmSMS.resx">
+      <DependentUpon>frmSMS.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmSupplier.resx">
+      <DependentUpon>frmSupplier.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmTeamdetail.resx">
+      <DependentUpon>frmTeamdetail.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmTeamEmployee.resx">
+      <DependentUpon>frmTeamEmployee.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmUserRights.resx">
+      <DependentUpon>frmUserRights.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmFuelFilling.resx">
+      <DependentUpon>frmFuelFilling.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmVehicleRepairing.resx">
+      <DependentUpon>frmVehicleRepairing.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmVehicleService.resx">
+      <DependentUpon>frmVehicleService.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmOtherExpense.resx">
+      <DependentUpon>frmOtherExpense.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmViewDocument.resx">
+      <DependentUpon>frmViewDocument.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="frmEmployee.resx">
+      <DependentUpon>frmEmployee.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmServiceCenter.resx">
+      <DependentUpon>frmServiceCenter.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmTeam.resx">
+      <DependentUpon>frmTeam.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmVehicle.resx">
+      <DependentUpon>frmVehicle.cs</DependentUpon>
+    </EmbeddedResource>
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+    <None Include="VMSDataSet.xsc">
+      <DependentUpon>VMSDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="VMSDataSet.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>VMSDataSet.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="VMSDataSet.xss">
+      <DependentUpon>VMSDataSet.xsd</DependentUpon>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include=".NETFramework,Version=v4.6">
+      <Visible>False</Visible>
+      <ProductName>Microsoft .NET Framework 4.6 %28x86 and x64%29</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+  </ItemGroup>
+  <ItemGroup>
+    <WCFMetadata Include="Service References\" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
